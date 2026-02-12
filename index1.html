@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Sis!</title>
+    <style>
+        :root {
+            --primary-pink: #ff85a1;
+            --soft-gold: #f9dcc4;
+            --text-color: #4a4a4a;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #fce4ec 0%, #fff1f1 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-color);
+            overflow-x: hidden;
+        }
+
+        .card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 450px;
+            width: 90%;
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            color: var(--primary-pink);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            animation: bounce 2s infinite;
+        }
+
+        .description {
+            line-height: 1.6;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: #666;
+        }
+
+        .cake-emoji {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .btn {
+            background-color: var(--primary-pink);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Confetti Effect */
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: var(--primary-pink);
+            opacity: 0.7;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <span class="cake-emoji">🎂</span>
+        <h1>Happy Birthday, Javi My lovely sister!</h1>
+        
+        <div class="description">
+            To the best sister in the world! I wanted to make you something a little special this for your Birthday. Javi you are the best sister I could ever have. You have been there for me whenever I needed you the most, and I'm really greatful and thankful to have you as my sister. You are my best sister and my favorite person. Thank you for being there for me. Love you sis. Happy birthday Javi.
+            </div>
+
+        <p>Wishing you the best day ever! 🎈</p>
+    </div>
+
+    <script>
+        // Fun little confetti generator
+        for(let i = 0; i < 30; i++) {
+            let confetti = document.createElement('div');
+            confetti.className = 'confetti';
+            confetti.style.left = Math.random() * 100 + 'vw';
+            confetti.style.top = Math.random() * 100 + 'vh';
+            confetti.style.backgroundColor = ['#ff85a1', '#f9dcc4', '#ffb3c1', '#64dfdf'][Math.floor(Math.random() * 4)];
+            confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+            document.body.appendChild(confetti);
+        }
+    </script>
+</body>
+</html>
